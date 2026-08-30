@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vendor-system-waleed"
+version = "1.0.0"
+description = "Vendor Order System with an automated restock bot and a Tkinter dashboard."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "Waleed Ahmad Khan" }]
+keywords = ["inventory", "vendor", "orders", "automation", "restock", "tkinter"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Office/Business",
+]
+
+[project.optional-dependencies]
+web = ["flask>=2.0"]
+
+[project.scripts]
+vendor-dashboard = "vendor_system.dashboard:main"
+
+[project.urls]
+Homepage = "https://github.com/waleed-2005/vendor-order-system"
+
+[tool.setuptools.packages.find]
+where = ["src"]
